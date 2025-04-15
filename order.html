@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+    header{
+        position: fixed;
+        padding: 10px;
+    }
+    header h1 {
+        font-size: var(--big-font);
+    }
+
+    header h1:hover {
+        color: var(--accent-color);
+    }
+
+    #nav-menu {
+        margin-left: 200px;
+    }
+
+    main {
+        padding: 2rem;
+        padding-bottom: 172px;
+    }
+
+    #order-list {
+        font-weight: 700;
+        list-style-type: none;
+        padding-top: 95px;
+        width: 55%;
+        margin: 0; 
+    }
+
+    #order-list li {
+        background-color: var(--accent-color);
+        margin: 0.5rem 0;
+        padding: 1rem;
+        border: 3px solid var(--bg-color);
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        font-size: var(--p-font);
+    }
+    
+
+    #order-list li img {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        border-radius: 5px;
+        border: #000000 2px solid;
+    }
+
+    #order-list li.selected {
+        background-color: var(--main-color);
+    }
+
+    button {
+        background: rgba(0, 0, 0, 0.808);
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #clear-order, #buy-button {
+        font-size: var(--p-font);
+        display: block;
+        padding: 1rem;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #buy-button{
+        bottom: 300px;
+        left: 750px;
+        width: 40%;
+        border: none;
+        border-radius: 25px;
+    }
+
+    #clear-order {
+        bottom: 0x;
+        left: 0;
+        width: 56%;
+        border: none;
+        border-radius: 16px;
+    }
+
+    #clear-order:hover {
+        background-color: red;
+    }
+
+    #buy-button:hover {
+        background-color: var(--accent-color);
+    }       
+
+    #total-price {
+        background: var(--text-color);
+        padding: 20px;
+        border-radius: 30px;
+        font-size: var(--p-font);
+        font-weight: 800;
+        color: rgb(0, 0, 0);
+        margin-top: 10px;
+        width: 40%;
+        position: fixed;
+        margin-left: 750px;
+        bottom: 410px;
+        left: 0;
+    }
+</style>
+<body>
+    <header>
+        <h1>Your Order</h1>
+        <ul class="navigation" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="menu-section">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div id="menu-list">
+            <h2 class="pad">Foods</h2>
+            <ul class="foods">
+                <li><a href="mainCourses.html">Main Courses</a></li>
+                <li><a href="sideDishes.html">Side Dishes</a></li>
+                <li><a href="soupsAndStews.html">Soups and Stews</a></li>
+                <li><a href="bakingAndPastry.html">Baking and Pastry</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="snacksAndAppetizers.html">Snacks and Appetizers</a></li>
+                <li><a href="saucesAndDips.html">Sauces and Dips</a></li>
+                <li><a href="streetFoods.html">Street Foods</a></li>
+            </ul>
+            <h2 class="pad">Drinks</h2>
+            <ul class="drinks">
+                <li><a href="nonAlcoholic.html">Non-Alcoholic</a></li>
+                <li><a href="alcohol.html">Alcoholic</a></li>
+                <li><a href="functionalBeverage.html">Functional Beverages</a></li>
+                <li><a href="dairyBasedDrink.html">Dairy-Based Drinks</a></li>
+            </ul>
+        </div>
+        <div class="rightContent" id="right-content">
+            <div class="box bx-menu" id="menu-icon"><img src="google-icons.png" alt="Menu Icon"></div>
+        </div>
+        <button id="toggle-button" class="toggle-button">X</button>
+    </header>
+    <main>
+        <ul id="order-list"></ul>
+        <div class="buy-price-section">
+            <div id="total-price">Total Price: P 0.00</div>
+            <div class="buttons">
+                <button id="clear-order">Clear Selected Items</button>
+                <button id="buy-button">Buy</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="orderHandler.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    #nav-menu {
+        margin-left: 300px;
+    }
+    header h1 {
+        font-size: var(--big-font);
+    }
+
+    header h1:hover {
+        color: var(--accent-color);
+    }
+    .padding-top{
+        padding-top: 100px;
+    }
+    section{
+        margin-top: 50px;
+        padding-top: 179px;
+        font-size: var(--p-font);
+        padding-bottom: 149px;
+    }
+    .contact {
+    padding: 50px 14%;
+    background: rgba(141, 141, 141, 0.918);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 30px;
+        color: var(--main-color);
+    }
+
+    .contact p {
+        font-size: var(--p-font);
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: var(--bg-color);
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form label {
+        font-size: var(--p-font);
+        margin-bottom: 10px;
+        color: var(--bg-color);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: var(--p-font);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid var(--bg-color);
+        border-radius: 5px;
+    }
+
+    .contact-form button {
+        font-size: var(--p-font);
+        padding: 10px;
+        background-color: var(--main-color);
+        color: var(--bg-color);
+        border: 1px solid var(--bg-color);
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background-color: var(--accent-color);
+    }
+</style>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <ul class="navigation" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="menu-section">Menu</a></li>
+            <li class="hidelp"><a href="phoneSizeOrder.html">Order</a></li>
+            <li class="hideph"><a href="order.html">Order</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div id="menu-list">
+            <h2 class="pad">Foods</h2>
+            <ul class="foods">
+                <li><a href="mainCourses.html">Main Courses</a></li>
+                <li><a href="sideDishes.html">Side Dishes</a></li>
+                <li><a href="soupsAndStews.html">Soups and Stews</a></li>
+                <li><a href="bakingAndPastry.html">Baking and Pastry</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="snacksAndAppetizers.html">Snacks and Appetizers</a></li>
+                <li><a href="saucesAndDips.html">Sauces and Dips</a></li>
+                <li><a href="streetFoods.html">Street Foods</a></li>
+            </ul>
+            <h2 class="pad">Drinks</h2>
+            <ul class="drinks">
+                <li><a href="nonAlcoholic.html">Non-Alcoholic</a></li>
+                <li><a href="alcohol.html">Alcoholic</a></li>
+                <li><a href="functionalBeverage.html">Functional Beverages</a></li>
+                <li><a href="dairyBasedDrink.html">Dairy-Based Drinks</a></li>
+            </ul>
+        </div>
+        <div class="rightContent" id="right-content">
+            <div class="box bx-menu" id="menu-icon"><img src="google-icons.png" alt="Menu Icon"></div>
+        </div>
+        <button id="toggle-button" class="toggle-button">X</button>
+    </header>
+    <div class="padding-top"></div>
+    <section class="contact" id="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, please feel free to contact us. We are here to help you!</p>
+        <form action="#" method="post" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <img src="cravekart.jpg" alt="CraveKart">
+            <h5>CraveKart</h5>
+            <p>123 Food Street, Delicious City, Yum</p>
+            <ul class="socials">
+                <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#"></a><img src="twitter-icon.jpg" alt="Twitter"></a></li>
+                <li><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 <img src="cravekart.jpg" alt="CraveKart">. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

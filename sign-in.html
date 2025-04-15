@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url(bg-signin.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff;
+        }
+        .container {
+            text-align: center;
+            padding: 0 25px;
+            padding-top: 0;
+            padding-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.90);
+            width: 250px;
+        }
+        .container h3 {
+            letter-spacing: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 40px;
+            text-shadow: 0 0 10px rgb(255, 115, 0);
+            font-size: 45px;
+        }
+        .container input[type="text"], .container input[type="password"] {
+            width: 94%;
+            padding: 10px;
+            margin: 15px 0;
+            border: none;
+            box-shadow: 0 0 10px rgb(255, 95, 2);
+            border-radius: 4px;
+            background-color: #000000;
+            color: #f1efec;
+        }
+        
+        .container button {
+            width: 90%;
+            padding: 10px;
+            background-color: #020202;
+            border-radius: 50px;
+            color: #ff9100;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+            box-shadow: 0 0 10px orange;
+            border: 1px white;
+            font-weight: 400;
+            margin-bottom: 100px;
+        }
+        
+        .container button:hover {
+            background-color: #fafafa;
+            color: #000000;
+            box-shadow: 0 0 10px rgb(255, 115, 0);
+        }
+        .container a {
+            text-decoration: none;
+            color: #fafafa;
+            font-style: italic;
+        }
+
+        .container a:hover {
+            color: #ff9100;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>SIGN IN</h3>
+        <form  id="signInForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">LOG IN</button>
+            <a href="register.html">Create new Account</a>
+            
+      </form>
+    </div>
+    <script>
+        document.getElementById('signInForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(user => user.username === username && user.password === password);
+
+            if (user) {
+                alert('Sign in successful');
+                localStorage.setItem('currentUser', username);
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid username or password');
+            }
+        });
+    </script>
+</body>
+</html>

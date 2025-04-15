@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff7e6; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .register-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .register-container h1 {
+            color: #ff9900;
+        }
+        .register-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .register-container button {
+            background-color: #ff9900;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .register-container button:hover {
+            background-color: #cc7a00; 
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h1>Register</h1>
+        <form id="registerForm">
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Retrieve existing users from localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Check if the username already exists
+            const userExists = users.some(user => user.username === username);
+            if (userExists) {
+                alert('Username already exists. Please choose a different one.');
+                return;
+            }
+
+            users.push({ username, password });
+            localStorage.setItem('users', JSON.stringify(users));
+
+            alert('Registration successful! You can now log in.');
+            window.location.href = 'sign-in.html';
+        });
+    </script>
+</body>
+</html>

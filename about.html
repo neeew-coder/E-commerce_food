@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    #nav-menu {
+        margin-left: 300px;
+    }
+    header h1 {
+        font-size: var(--big-font);
+    }
+
+    header h1:hover {
+        color: var(--accent-color);
+    }
+    section{
+        padding-top: 179px;
+        font-size: var(--p-font);
+        padding-bottom: 149px;
+    }
+    .member-section{
+        display: grid;
+        grid-template-areas: "members1 members2 members3"
+                             "members4 members5 members6"
+                             "members7 members7 members7";         
+        grid-auto-rows: 250px;
+        padding-top: 10px;
+    }
+    .member-section div{
+        margin: 6px;
+        text-align: center;
+        font-size: 18px;
+        color: var(--main-color);
+        font-family: monospace;
+    }
+    .member-section img{
+        margin-top: 40px;
+        width: 150px;
+        height: 150px;
+        border: 1px solid var(--accent-color);
+        border-radius: 100%;
+    }
+
+</style>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <ul class="navigation" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="menu-section">Menu</a></li>
+            <li class="hidelp"><a href="phoneSizeOrder.html">Order</a></li>
+            <li class="hideph"><a href="order.html">Order</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div id="menu-list">
+            <h2 class="pad">Foods</h2>
+            <ul class="foods">
+                <li><a href="mainCourses.html">Main Courses</a></li>
+                <li><a href="sideDishes.html">Side Dishes</a></li>
+                <li><a href="soupsAndStews.html">Soups and Stews</a></li>
+                <li><a href="bakingAndPastry.html">Baking and Pastry</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="snacksAndAppetizers.html">Snacks and Appetizers</a></li>
+                <li><a href="saucesAndDips.html">Sauces and Dips</a></li>
+                <li><a href="streetFoods.html">Street Foods</a></li>
+            </ul>
+            <h2 class="pad">Drinks</h2>
+            <ul class="drinks">
+                <li><a href="nonAlcoholic.html">Non-Alcoholic</a></li>
+                <li><a href="alcohol.html">Alcoholic</a></li>
+                <li><a href="functionalBeverage.html">Functional Beverages</a></li>
+                <li><a href="dairyBasedDrink.html">Dairy-Based Drinks</a></li>
+            </ul>
+        </div>
+        <div class="rightContent" id="right-content">
+            <div class="box bx-menu" id="menu-icon"><img src="google-icons.png" alt="Menu Icon"></div>
+        </div>
+        <button id="toggle-button" class="toggle-button">X</button>
+    </header>
+
+    <section class="about" id="about-section">
+        <p>Welcome to our E-commerce food website. We are dedicated to providing you with the best home-cooked meals delivered to your doorstep quickly and affordably. Our mission is to bring the taste of home to you, no matter where you are.</p>
+        <p>Our team of experienced chefs prepares each meal with the freshest ingredients and utmost care. We believe in quality, taste, and convenience. Thank you for choosing us for your dining needs.</p>
+        <div class="member-section">
+            <div class="members1">
+                <img src="members/kevin.jpg" alt="">
+                <p>Project Board/Coder/Designer</p>
+                <p>Mark Kevin Villaflor</p>
+            </div>
+            <div class="members2">
+                <img src="members/charlie.jpg" alt="">
+                <p>Project Manager/Designer</p>
+                <p>Jan Charlie Reyes</p>
+            </div>
+            <div class="members3">
+                <img src="members/ronald.jpg" alt="">
+                <p>Designer/ Coder</p>
+                <p>Ronald Daseco</p>
+            </div>
+            <div class="members4">
+                <img src="members/jane rose.jpg" alt="">
+                <p>PhotoGrapher</p>
+                <p>Jane Rose Balbuena</p>
+            </div>
+            <div class="members5">
+                <img src="members/cherry mee.jpg" alt="">
+                <p>Designer</p>
+                <p>Cherry Mee Bali-os</p>
+            </div>
+            <div class="members6">
+                <img src="members/jonathan.jpg" alt="">
+                <p>Jonathan Aboyog</p>
+            </div>
+            <div class="members7">
+                <img src="members/vincent.jpg" alt="">
+                <p>Vincent Suano</p>
+            </div>
+            
+        </div>  
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <img src="cravekart.jpg" alt="CraveKart">
+            <h5>CraveKart</h5>
+            <p>123 Food Street, Delicious City, Yum</p>
+            <ul class="socials">
+                <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#"></a><img src="twitter-icon.jpg" alt="Twitter"></a></li>
+                <li><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 <img src="cravekart.jpg" alt="CraveKart">. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+   
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .menu .menu-items {
+        margin-top: 50px;
+    }
+    h1{
+        color: var(--accent-color);
+    }
+</style>
+<body>
+    <header>
+        <h1>Soups And Stews</h1>
+        <ul class="navigation" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="menu-section">Menu</a></li>
+            <li class="hidelp"><a href="phoneSizeOrder.html">Order</a></li>
+            <li class="hideph"><a href="order.html">Order</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div id="menu-list">
+            <h2 class="pad">Foods</h2>
+            <ul class="foods">
+                <li><a href="mainCourses.html">Main Courses</a></li>
+                <li><a href="sideDishes.html">Side Dishes</a></li>
+                <li><a href="soupsAndStews.html">Soups and Stews</a></li>
+                <li><a href="bakingAndPastry.html">Baking and Pastry</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="snacksAndAppetizers.html">Snacks and Appetizers</a></li>
+                <li><a href="saucesAndDips.html">Sauces and Dips</a></li>
+                <li><a href="streetFoods.html">Street Foods</a></li>
+            </ul>
+            <h2 class="pad">Drinks</h2>
+            <ul class="drinks">
+                <li><a href="nonAlcoholic.html">Non-Alcoholic</a></li>
+                <li><a href="alcohol.html">Alcoholic</a></li>
+                <li><a href="functionalBeverage.html">Functional Beverages</a></li>
+                <li><a href="dairyBasedDrink.html">Dairy-Based Drinks</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="menu" id="menu-section">
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="tomato soup.png" alt="Tomato Soup">
+                <h3>Tomato Soup</h3>
+                <p>P 22.00</p>
+                <a class="order-btn" href="#"> Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="spinach soup.png" alt="Spinach Soup">
+                <h3>Spinach Soup</h3>34.00</p>
+                <a class="order-btn" href="#"> Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="beef stew.png" alt="Beef Stew">
+                <h3>Beef Stew</h3>
+                <p>P 71.00</p>
+                <a class="order-btn" href="#"> Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="potato soup.png" alt="Potato Soup">
+                <h3>Potato Soup</h3>
+                <p>P 35.00</p>
+                <a class="order-btn" href="#"> Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="pumpkin soup.png" alt="Pumpkin Soup">
+                <h3>Pumpkin Soup</h3>
+                <p>P 40.00</p>
+                <a class="order-btn" href="#"> Order Now</a>
+            </div>
+            <div class="menu-item">
+                <img src="chicken curry.png" alt="Chicken Curry">
+                <h3>Chicken Curry</h3>
+                <p>P 61.00</p>
+                <a class="order-btn" href="#"> Order Now</a>
+            </div>
+        </div>
+    </section>
+    <script src="orderHandler.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.querySelector('.menu-section').addEventListener('click', function() {
+            var menuList = document.getElementById('menu-list');
+            menuList.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
