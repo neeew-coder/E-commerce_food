@@ -44,6 +44,25 @@
         border: 1px solid var(--accent-color);
         border-radius: 100%;
     }
+    @media (max-width: 767px) {
+        .member-section {
+            grid-template-areas: "members1 members2"
+                                 "members3 members4"
+                                 "members5 members6"
+                                 "members7 members7"; 
+        }
+    }
+    @media (max-width: 500px) {
+        .member-section {
+            grid-template-areas: "members1"
+                                 "members2"
+                                 "members3"
+                                 "members4"
+                                 "members5"
+                                 "members6"
+                                 "members7"; 
+        }
+    }
 
 </style>
 <body>
